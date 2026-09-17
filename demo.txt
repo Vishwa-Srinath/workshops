@@ -1,3 +1,2 @@
-thdtdhgchjhfjhg
-
-jhvjhvjh
+Welcome CSE 24!
+This is our interactive GitHub Actions demonstration at UOM.
