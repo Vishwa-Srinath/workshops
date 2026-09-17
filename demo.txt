@@ -1,2 +1,2 @@
 Welcome CSE 25!
-This is our interactive GitHub Actions demonstration at UOM.
+This is our interactive GitHub Actions demonstration at UO.
