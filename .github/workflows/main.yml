@@ -1,0 +1,30 @@
+name: Text File CI Pipeline
+
+on:
+  push:
+    branches:
+      - main
+      - Vishwa-Srinath # Triggers the workflow on your current branch
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  verify-text:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Read the Text File
+        run: cat demo.txt
+
+      - name: Verify Required Word
+        run: |
+          if grep -q "UOM" demo.txt; then
+            echo "✅ Success: The required word 'UOM' was found!"
+          else
+            echo "❌ Error: The word 'UOM' is missing! Breaking the build."
+            exit 1
+          fi
